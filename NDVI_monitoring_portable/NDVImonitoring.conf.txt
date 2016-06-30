@@ -1,0 +1,14 @@
+description "NDVI vegetation monitoring"
+author "g_massa@libero.it"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+env AN_ENVIRONMENTAL_VARIABLE=i-want-to-set
+
+respawn
+
+exec /path/NDVImonitoring.py
+
+
+comment: /etc/init
